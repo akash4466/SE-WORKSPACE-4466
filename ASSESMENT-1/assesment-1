@@ -1,0 +1,172 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+/* Function to reverse a string */
+void reverseString(string str)
+{
+    string rev = "";
+    for (int i = str.length() - 1; i >= 0; i--)
+        rev += str[i];
+
+    cout << "Reversed string: " << rev << endl;
+}
+
+/* Function to concatenate two strings */
+void concatenateString(string str)
+{
+    string str2;
+    cout << "Enter second string: ";
+    getline(cin, str2);
+
+    cout << "Concatenated string: " << str + str2 << endl;
+}
+
+/* Function to check palindrome */
+void checkPalindrome(string str)
+{
+    string rev = "";
+    for (int i = str.length() - 1; i >= 0; i--)
+        rev += str[i];
+
+    if (str == rev)
+        cout << "The string is a Palindrome." << endl;
+    else
+        cout << "The string is NOT a Palindrome." << endl;
+}
+
+/* Function to copy a string */
+void copyString(string str)
+{
+    string copy = str;
+    cout << "Copied string: " << copy << endl;
+}
+
+/* Function to find length of string */
+void stringLength(string str)
+{
+    cout << "Length of string: " << str.length() << endl;
+}
+
+/* Function to find frequency of a character */
+void characterFrequency(string str)
+{
+    char ch;
+    int count = 0;
+
+    cout << "Enter character to find frequency: ";
+    cin >> ch;
+
+    for (char c : str)
+    {
+        if (c == ch)
+            count++;
+    }
+
+    cout << "Frequency of '" << ch << "' is: " << count << endl;
+}
+
+/* Function to count vowels and consonants */
+void countVowelsConsonants(string str)
+{
+    int vowels = 0, consonants = 0;
+
+    for (char c : str)
+    {
+        c = tolower(c);
+        if (isalpha(c))
+        {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+                vowels++;
+            else
+                consonants++;
+        }
+    }
+
+    cout << "Vowels: " << vowels << endl;
+    cout << "Consonants: " << consonants << endl;
+}
+
+/* Function to count spaces and digits */
+void countSpacesDigits(string str)
+{
+    int spaces = 0, digits = 0;
+
+    for (char c : str)
+    {
+        if (c == ' ')
+            spaces++;
+        else if (isdigit(c))
+            digits++;
+    }
+
+    cout << "Blank spaces: " << spaces << endl;
+    cout << "Digits: " << digits << endl;
+}
+
+int main()
+{
+    int choice;
+    char cont;
+
+    do
+    {
+        string str;
+        cout << "\nEnter a string: ";
+        cin.ignore();
+        getline(cin, str);
+
+        cout << "\n------ STRING OPERATIONS MENU ------\n";
+        cout << "1. Reverse a string\n";
+        cout << "2. Concatenation\n";
+        cout << "3. Palindrome check\n";
+        cout << "4. Copy a string\n";
+        cout << "5. Length of string\n";
+        cout << "6. Frequency of a character\n";
+        cout << "7. Count vowels and consonants\n";
+        cout << "8. Count blank spaces and digits\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        cout << endl;
+
+        switch (choice)
+        {
+        case 1:
+            reverseString(str);
+            break;
+        case 2:
+            cin.ignore();
+            concatenateString(str);
+            break;
+        case 3:
+            checkPalindrome(str);
+            break;
+        case 4:
+            copyString(str);
+            break;
+        case 5:
+            stringLength(str);
+            break;
+        case 6:
+            characterFrequency(str);
+            break;
+        case 7:
+            countVowelsConsonants(str);
+            break;
+        case 8:
+            countSpacesDigits(str);
+            break;
+        default:
+            cout << "Invalid choice! No operation performed." << endl;
+        }
+
+        cout << "\nDo you want to continue? (y/n): ";
+        cin >> cont;
+
+    } while (cont == 'y' || cont == 'Y');
+
+    cout << "\nThank you for using the String Application!" << endl;
+    return 0;
+}
