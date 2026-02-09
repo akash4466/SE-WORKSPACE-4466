@@ -1,0 +1,617 @@
+Q1>Write an essay covering the history and evolution of C programming. Explain
+its importance and why it is still used today
+
+ans>The C programming language is one of the most influential and widely used programming languages in the history of computer science. It has played a crucial role in the development of modern software systems and programming languages
+
+Q2>Research and provide three real-world applications where C programming is
+extensively used, such as in embedded systems, operating systems, or game
+development
+
+ans>Operating Systems: C is used to develop kernels like UNIX, Linux, and Windows because it provides fast execution and direct hardware access.Embedded Systems: Microcontrollers, IoT devices, and automotive systems use C for its efficiency and low memory usage.
+
+Q3>Describe the steps to install a C compiler (e.g., GCC) and set up an Integrated
+Development Environment (IDE) like DevC++, VS Code, or CodeBlocks.
+
+ans>nstalling GCC and setting up an IDE makes C programming easier by providing tools for coding, compiling, and debugging. IDEs like Dev-C++, CodeBlocks, and VS Code simplify development for beginners and professionals.
+
+Q4>Explain the basic structure of a C program, including headers, main function,
+comments, data types, and variables. Provide examples.
+
+ans>A C program has a simple and well-defined structure. It begins with header files (like #include <stdio.h>) which provide predefined functions. The main() function is the entry point where program execution starts
+
+Q5>Write a C program that includes variables, constants, and comments. Declare
+and use different data types (int, char, float) and display their values.
+
+ans>program demonstrates the use of comments for clarity, variables to store values, and a constant whose value cannot be changed. It uses different data types (int, char, and float) and displays their values using the printf function.
+
+Q6>Write notes explaining each type of operator in C: arithmetic, relational,
+logical, assignment, increment/decrement, bitwise, and conditional operators
+
+ans>Logical operators combine multiple conditions, and assignment operators assign values to variables. Increment and decrement operators increase or decrease a value by one. Bitwise operators work at the bit level, and the conditional (ternary) operator is a short form of the if-else statement used for decision making.
+
+Q7>Write a C program that accepts two integers from the user and performs
+arithmetic, relational, and logical operations on them. Display the results
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+     
+    printf("Enter first integer: ");
+    scanf("%d", &a);
+    printf("Enter second integer: ");
+    scanf("%d", &b);
+
+     
+    printf("\nArithmetic Operations:\n");
+    printf("Addition: %d\n", a + b);
+    printf("Subtraction: %d\n", a - b);
+    printf("Multiplication: %d\n", a * b);
+    printf("Division: %d\n", a / b);
+    printf("Modulus: %d\n", a % b);
+
+     
+    printf("\nRelational Operations:\n");
+    printf("a == b : %d\n", a == b);
+    printf("a != b : %d\n", a != b);
+    printf("a > b  : %d\n", a > b);
+    printf("a < b  : %d\n", a < b);
+    printf("a >= b : %d\n", a >= b);
+    printf("a <= b : %d\n", a <= b);
+
+    printf("\nLogical Operations:\n");
+    printf("(a > 0 && b > 0) : %d\n", (a > 0 && b > 0));
+    printf("(a > 0 || b > 0) : %d\n", (a > 0 || b > 0));
+    printf("!(a > b) : %d\n", !(a > b));
+
+    return 0;
+}
+
+Q8>Explain decision-making statements in C (if, else, nested if-else, switch).
+Provide examples of each.
+
+ans>Decision-making statements in C are used to control the flow of a program based on conditions. The if statement executes a block of code when a condition is true, while else runs when the condition is false.
+
+Q9> Write a C program to check if a number is even or odd using an if-else
+statement. Extend the program using a switch statement to display the month
+name based on the user’s input 
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int num, month;
+
+     
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num % 2 == 0)
+        printf("The number is Even\n");
+    else
+        printf("The number is Odd\n");
+
+     
+    printf("\nEnter month number (1-12): ");
+    scanf("%d", &month);
+
+    switch (month) {
+        case 1: printf("January"); break;
+        case 2: printf("February"); break;
+        case 3: printf("March"); break;
+        case 4: printf("April"); break;
+        case 5: printf("May"); break;
+        case 6: printf("June"); break;
+        case 7: printf("July"); break;
+        case 8: printf("August"); break;
+        }
+
+    return 0;
+}
+
+Q10>Compare and contrast while loops, for loops, and do-while loops. Explain the
+scenarios in which each loop is most appropriate.
+
+
+ans>A for loop is best when the number of iterations is fixed or known, as initialization, condition, and increment are written in one line. A do-while loop executes the loop body at least once because the condition is checked after execution, making it useful when the loop must run at least one time (such as menu-driven programs).
+
+Q11> Compare and contrast while loops, for loops, and do-while loops. Explain the
+scenarios in which each loop is most appropriate.
+
+ans>Use while when the number of repetitions is unknown.
+
+
+Use for when the number of repetitions is fixed or known.
+
+
+Use do-while when the loop must run at least once.
+
+
+Q12>Write a C program to print numbers from 1 to 10 using all three types of loops
+(while, for, do-while).
+
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int i;
+
+     
+    i = 1;
+    printf("Using while loop:\n");
+    while (i <= 10) {
+        printf("%d ", i);
+        i++;
+    }
+
+    printf("\n\n");
+
+     
+    printf("Using for loop:\n");
+    for (i = 1; i <= 10; i++) {
+        printf("%d ", i);
+    }
+
+    printf("\n\n");
+
+     
+    i = 1;
+    printf("Using do-while loop:\n");
+    do {
+        printf("%d ", i);
+        i++;
+    } while (i <= 10);
+
+    return 0;
+}
+
+Q13>Explain the use of break, continue, and goto statements in C. Provide
+examples of each.
+
+ans>
+break stop the loop
+
+continue skip current loop step
+
+goto jump to a label (use carefully)
+
+Q14>Write a C program that uses the break statement to stop printing numbers
+when it reaches 5. Modify the program to skip printing the number 3 using the
+continue statement
+
+ans>#include <stdio.h>
+
+int main() {
+    int i;
+
+    for (i = 1; i <= 10; i++) {
+        if (i == 5)
+            break/continue ;
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+
+Q15>What are functions in C? Explain function declaration, definition, and how to
+call a function. Provide examples.
+
+ans>A function is a block of code that performs a specific task, helps reuse code, and makes programs organized.
+
+Q16>Write a C program that calculates the factorial of a number using a function.
+Include function declaration, definition, and call.
+
+ans>
+#include <stdio.h>
+
+ 
+int factorial(int n);
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+     
+    printf("Factorial of %d = %d\n", num, factorial(num));
+
+    return 0;
+}
+
+ 
+int factorial(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact *= i;  // Multiply fact by i
+    }
+    return fact;
+}
+
+Q17>Explain the concept of arrays in C. Differentiate between one-dimensional and
+multi-dimensional arrays with examples.
+
+ans>An array in C is a collection of elements of the same data type stored in contiguous memory locations.
+Arrays are used to store multiple values in a single variable instead of declaring separate variables for each value.
+
+Q18>Write a C program that stores 5 integers in a one-dimensional array and prints
+them. Extend this to handle a two-dimensional array (3x3 matrix) and
+calculate the sum of all elements.
+
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int numbers[5]; // 1D array
+    printf("Enter 5 integers:\n");
+
+    
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+     
+    printf("The numbers are: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+Q19>Explain what pointers are in C and how they are declared and initialized. Why
+are pointers important in C?
+
+ans>A pointer is a variable that stores the memory address of another variable instead of storing the value directly.
+
+Q20>Write a C program to demonstrate pointer usage. Use a pointer to modify the
+value of a variable and print the result.
+
+ans>
+int *ptr;declares a pointer to an integer.
+
+ptr = &num;pointer stores the address of num.
+
+*ptr = 25;changes the value at that address, effectively modifying num.
+
+Printing num shows that its value has been updated through the pointer.
+
+Q21>Explain string handling functions like strlen(), strcpy(), strcat(),
+strcmp(), and strchr(). Provide examples of when these functions are
+useful.
+
+ans>
+strlen() Length of string	size_t	Validate input length
+strcpy() Copy string	char*	Duplicate strings
+strcat() Concatenate strings	char*	Build messages
+strcmp() Compare strings	int	Check password, sort strings
+strchr() Find character	char*	Search character in text
+
+Q22>Write a C program that takes two strings from the user and concatenates them
+using strcat(). Display the concatenated string and its length using
+strlen()
+
+ans>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[100], str2[50];   
+
+     
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    str1[strcspn(str1, "\n")] = '\0'; // Remove newline character
+
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    str2[strcspn(str2, "\n")] = '\0'; // Remove newline character
+
+     
+    strcat(str1, str2);
+
+     
+    printf("Concatenated string: %s\n", str1);
+    printf("Length of concatenated string: %lu\n", strlen(str1));
+
+    return 0;
+}
+
+Q23>Write a C program that accepts 10 integers from the user and stores them in an array. The 
+program should then find and print the maximum and minimum values in the array
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int arr[10];
+    int i, max, min;
+
+     
+    printf("Enter 10 integers:\n");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+     
+    max = arr[0];
+    min = arr[0];
+
+     
+    for (i = 1; i < 10; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+     
+    printf("Maximum value: %d\n", max);
+    printf("Minimum value: %d\n", min);
+
+    return 0;
+}
+
+Q24>Write a C program that accepts two 2x2 matrices from the user and adds them. Display the 
+resultant matrix. 
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int a[2][2], b[2][2], sum[2][2], i, j;
+
+     
+    printf("Enter elements of first 2x2 matrix:\n");
+    for(i = 0; i < 2; i++)
+        for(j = 0; j < 2; j++)
+            scanf("%d", &a[i][j]);
+
+     
+    printf("Enter elements of second 2x2 matrix:\n");
+    for(i = 0; i < 2; i++)
+        for(j = 0; j < 2; j++)
+            scanf("%d", &b[i][j]);
+
+     
+    for(i = 0; i < 2; i++)
+        for(j = 0; j < 2; j++)
+            sum[i][j] = a[i][j] + b[i][j];
+
+     
+    printf("Resultant matrix:\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++)
+            printf("%d ", sum[i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Q25>Write a C program that takes N numbers from the user and stores them in an array. The 
+program should then calculate and display the sum of all array elements. 
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int n, i, sum = 0;
+    int arr[100];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d numbers:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+
+    printf("Sum of array elements = %d\n", sum);
+
+    return 0;
+}
+
+
+Q26>Write a C program that generates the Fibonacci sequence up to N terms using a recursive 
+function. 
+
+ans>
+#include <stdio.h>
+
+int fib(int n) {
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
+
+int main() {
+    int n, i;
+
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci sequence:\n");
+    for (i = 0; i < n; i++) {
+        printf("%d ", fib(i));
+    }
+
+    return 0;
+}
+
+
+Q27>Write a C program that calculates the factorial of a given number using a function.
+
+ans>#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    printf("Factorial of %d = %d\n", num, factorial(num));
+
+    r
+
+Q28>Write a C program that takes a number as input and checks whether it is a palindrome using 
+a function. 
+
+ans>
+#include <stdio.h>
+
+int isPalindrome(int n) {
+    int rev = 0, temp = n;
+    while (temp != 0) {
+        rev = rev * 10 + temp % 10;
+        temp /= 10;
+    }
+    return (n == rev);
+}
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (isPalindrome(num))
+        printf("Palindrome number\n");
+    else
+        printf("Not a palindrome number\n
+
+
+Q29> Write a C program that takes a string as input and reverses it using a function.
+
+ans>
+#include <stdio.h>
+#include <string.h>
+
+void reverseString(char str[]) {
+    int i, len = strlen(str);
+    for (i = 0; i < len / 2; i++) {
+        char temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
+    }
+}
+
+int main() {
+    char str[100];
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    rev
+
+
+Q30>Write a C program that takes a string from the user and counts the number of vowels and 
+consonants in the string.
+
+ans>
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int i, vowels = 0, consonants = 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]);
+        if (ch >= 'a' && ch <= 'z') {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                vowels++;
+            else
+                consonants++;
+
+
+
+Q31>Write a C program that counts the number of words in a sentence entered by the user.
+
+ans>
+#include <stdio.h>
+
+int main() {
+    char str[200];
+    int i, words = 1;
+
+    printf("Enter a sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ' && str[i + 1] != ' ')
+            words++;
+    }
+
+Q32>Write a C program that checks whether a given number is an Armstrong number or not (e.g., 
+153 = 1^3 + 5^3 + 3^3)
+
+ans>#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, temp, rem, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    temp = num;
+    while (temp != 0) {
+        rem = temp % 10;
+        sum += rem * rem * rem;
+        temp /= 10;
+    }
+
+    if (sum == num)
+        printf("Armstrong number\n");
+    else
+        printf("Not an Armstrong number\n");
+
+    return 0;
+}
+
+Q33>Write a C program that generates Pascal’s Triangle up to N rows using loops.
+
+ans>
+#include <stdio.h>
+
+int main() {
+    int n, i, j, num;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        num = 1;
+        for(j = 0; j <= i; j++) {
+            printf("%d ", num);
+            num = num * (i - j) / (j + 1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
