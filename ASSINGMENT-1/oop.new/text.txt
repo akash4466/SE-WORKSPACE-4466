@@ -1,0 +1,174 @@
+1. Key differences between POP and OOP
+
+Procedural Programming focuses on functions and sequence of steps.
+OOP focuses on objects that contain data and functions together.
+POP is less secure, while OOP supports better security and reusability.
+
+2. Advantages of OOP over POP
+
+OOP provides data hiding using encapsulation.
+It supports code reusability through inheritance.
+Programs are easier to maintain and scale.
+
+3. Steps to set up a C++ development environment
+
+Install an IDE like Dev C++ or CodeBlocks.
+Set up a C++ compiler (GCC/MinGW).
+Write, compile, and run a C++ program.
+
+4. Main input/output operations in C++
+
+cin is used to take input from the user.
+cout is used to display output on the screen.
+Both are defined in the <iostream> header.
+
+5. Data types in C++
+
+C++ has basic data types like int, float, double, and char.
+Derived data types include arrays, pointers, and references.
+User-defined types are struct, union, enum, and class.
+bool is used for true/false values.
+Example: int a = 10; float b = 2.5; char c = 'A';
+
+6. Implicit vs Explicit Type Conversion
+
+Implicit conversion is done automatically by the compiler.
+Example: float x = 10; (int to float).
+Explicit conversion is done manually by the programmer.
+It uses type casting like (int) or static_cast.
+Example: int y = (int)3.7;
+
+7. Types of operators in C++
+
+Arithmetic operators: + - * / %.
+Relational operators: > < >= <= == !=.
+Logical operators: && || !.
+Bitwise operators: & | ^ << >>.
+Example: if(a > b && a != 0).
+
+8. Constants and literals in C++
+
+Constants are fixed values that cannot be changed.
+They are declared using the const keyword.
+Literals are actual fixed values used in programs.
+Examples of literals: 10, 3.14, 'A', "Hello".
+Example: const int PI = 3.14;
+
+9. Conditional statements in C++
+
+Conditional statements are used to make decisions in a program.
+if-else executes code based on a true or false condition.
+Example: if(marks > 50) pass else fail.
+switch selects one case from many options.
+It is mainly used for menu-driven programs.
+
+10. Difference between for, while, and do-while loops
+
+for loop is used when the number of iterations is known.
+while loop is used when iterations depend on a condition.
+do-while loop executes at least once.
+Condition is checked before execution in for and while.
+Condition is checked after execution in do-while.
+
+11. break and continue statements
+
+break is used to exit a loop immediately.
+continue skips the current iteration.
+break stops loop execution completely.
+continue moves control to the next iteration.
+Example: if(i==5) break;
+
+12. Nested control structures
+
+Nested control structures mean one control statement inside another.
+Commonly used with loops and conditional statements.
+Example: a loop inside another loop.
+Used for patterns and tables.
+
+13. Function in C++
+
+A function is a block of code used to perform a specific task.
+Declaration tells the function name and parameters.
+Definition contains the actual logic of the function.
+Calling a function executes its code.
+
+14. Scope of variables in C++
+
+Scope defines where a variable can be accessed.
+Local variables are declared inside a function.
+They can be used only within that function.
+Global variables are declared outside all functions.
+
+15. Recursion in C++
+
+Recursion is when a function calls itself.
+It is used for repetitive problems like factorial.
+A base condition is required to stop recursion.
+Example: fact(n) = n * fact(n-1).
+
+16. Function prototypes in C++
+
+A function prototype declares a function before use.
+It specifies return type and parameters.
+Written before the main() function.
+It helps avoid compilation errors.
+
+17. Arrays in C++
+
+An array is a collection of elements of the same data type.
+A single-dimensional array stores data in a linear form.
+A multi-dimensional array stores data in table or matrix form.
+Example: int a[5]; and int b[2][2];
+
+18. String handling in C++
+
+Strings are used to store text data.
+C++ supports strings using string class and character arrays.
+cin and getline() are used for input.
+Example: string name = "Akash";
+
+19. Array initialization in C++
+
+Arrays can be initialized at the time of declaration.
+1D array example: int a[3] = {1,2,3};
+2D array example: int b[2][2] = {{1,2},{3,4}};
+Values are stored in indexed form.
+
+20. String operations and functions
+
+String operations include length, compare, and concatenation.
+Common functions are length(), append(), and compare().
+C++ also supports + operator for joining strings.
+Example: s1 + s2;
+
+21. Key concepts of Object-Oriented Programming (OOP)
+
+OOP is a programming approach based on objects.
+Main concepts are class, object, encapsulation, inheritance, and polymorphism.
+It helps organize code in a real-world manner.
+OOP improves code reusability and security.
+It makes programs easier to maintain.
+
+22. Classes and objects in C++
+
+A class is a blueprint for creating objects.
+It contains data members and member functions.
+An object is an instance of a class.
+Objects access the class members.
+Example: class Car { int speed; }; Car c;
+
+23. Inheritance in C++
+
+Inheritance allows one class to acquire properties of another class.
+The existing class is called the base class.
+The new class is called the derived class.
+It promotes code reusability.
+Example: class Student : public Person { };
+
+24. Encapsulation in C++
+
+Encapsulation means binding data and methods together.
+It protects data from unauthorized access.
+Achieved using access specifiers like private and public.
+Data members are kept private.
+Functions are used to access them.
