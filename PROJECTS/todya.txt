@@ -20,6 +20,326 @@ Here is the correct and clean SQL syntax for your queries with proper formatting
 15. Select All Records
 SELECT * 
 FROM tablename;
+ 
+
+16. Display Particular Column
+SELECT column_name 
+FROM tablename;
+ 
+
+Example:
+
+SELECT name 
+FROM students;
+17. Display Particular Row
+SELECT * 
+FROM tablename 
+WHERE id = value;
+ 
+
+SELECT * FROM students WHERE id = 5;
+If id is string → use quotes
+
+SELECT * FROM students WHERE id = 'A101';
+18. Order By (Sorting Data)
+Ascending (default):
+
+SELECT column_name 
+FROM tablename 
+ORDER BY column_name ASC;
+Descending:
+
+SELECT column_name 
+FROM tablename 
+ORDER BY column_name DESC;
+Example:
+
+SELECT name 
+FROM students 
+ORDER BY name ASC;
+If you want, I can also give you:
+
+ 
+
+
+You said:
+Uploaded image
+
+ChatGPT said:
+Your image explains SQL Aggregate Functions 👍
+Here is the corrected and clearer version with proper explanation and examples:
+
+📊 Aggregate Functions in SQL
+Aggregate functions perform calculations on a column of values and return a single result.
+
+1️⃣ AVG() – Average Value
+Returns the average of a numeric column.
+
+SELECT AVG(salary) 
+FROM employees;
+2️⃣ COUNT() – Number of Rows
+Returns the total number of rows.
+
+SELECT COUNT(*) 
+FROM employees;
+Count specific column (ignores NULL values):
+
+SELECT COUNT(salary) 
+FROM employees;
+3️⃣ MAX() – Largest Value
+Returns the highest value.
+
+SELECT MAX(salary) 
+FROM employees;
+4️⃣ MIN() – Smallest Value
+Returns the lowest value.
+
+SELECT MIN(salary) 
+FROM employees;
+5️⃣ SUM() – Total Value
+Returns the sum of a numeric column.
+
+SELECT SUM(salary) 
+FROM employees;
+6️⃣ FIRST() and LAST() ⚠
+FIRST() and LAST() are not supported in all databases (like MySQL).
+
+Instead, use:
+
+SELECT column_name 
+FROM table_name 
+ORDER BY column_name ASC 
+LIMIT 1;
+For last:
+
+SELECT column_name 
+FROM table_name 
+ORDER BY column_name DESC 
+LIMIT 1;
+💡 Important Concept: GROUP BY
+Aggregate functions are often used with GROUP BY.
+
+Example:
+
+SELECT department, AVG(salary) 
+FROM employees 
+GROUP BY department;
+If you want, I can give:
+
+🔹 20 SQL aggregate practice questions
+
+🔹 SQL notes PDF style explanation
+
+🔹 Interview-level SQL queries
+
+Tell me what you need 😊
+
+
+You said:
+Uploaded image
+
+ChatGPT said:
+Your image explains SQL Scalar Functions 👍
+Here is the corrected and clearer version with proper syntax and examples:
+
+🔹 Scalar Functions in SQL
+Scalar functions operate on a single value and return a single value.
+
+1️⃣ UCASE() / UPPER()
+Converts text to uppercase.
+
+SELECT UPPER(name) 
+FROM students;
+2️⃣ LCASE() / LOWER()
+Converts text to lowercase.
+
+SELECT LOWER(name) 
+FROM students;
+3️⃣ MID() / SUBSTRING()
+Extracts characters from a string.
+
+SELECT SUBSTRING(name, 1, 3) 
+FROM students;
+👉 Starts from position 1 and extracts 3 characters.
+
+4️⃣ LEN() / LENGTH()
+Returns the length of text.
+
+SQL Server:
+
+SELECT LEN(name) 
+FROM students;
+MySQL:
+
+SELECT LENGTH(name) 
+FROM students;
+5️⃣ ROUND()
+Rounds a number to specified decimal places.
+
+SELECT ROUND(salary, 2) 
+FROM employees;
+6️⃣ NOW()
+Returns current date and time.
+
+SELECT NOW();
+SQL Server:
+
+SELECT GETDATE();
+7️⃣ FORMAT()
+Formats a value for display.
+
+Example (SQL Server):
+
+SELECT FORMAT(salary, 'N2') 
+FROM employees;
+🔥 Important Note
+Different databases (MySQL, SQL Server, Oracle) use slightly different function names.
+
+If you want, I can now explain:
+
+🔹 String functions full list
+
+🔹 Date & Time functions
+
+🔹 30 SQL practice queries
+
+🔹 SQL interview questions
+
+Just tell me 😊
+
+
+You said:
+dql info
+
+ChatGPT said:
+📘 DQL (Data Query Language) in SQL
+DQL is used to retrieve data from a database.
+
+👉 It does NOT modify data.
+👉 It is used only for fetching / reading records.
+
+🔹 Main Command in DQL
+1️⃣ SELECT
+This is the only major command in DQL.
+
+🔹 Basic Syntax
+SELECT column_name
+FROM table_name;
+🔹 Examples
+✅ 1. Select All Data
+SELECT * 
+FROM students;
+✅ 2. Select Specific Column
+SELECT name, age 
+FROM students;
+✅ 3. Select With Condition (WHERE)
+SELECT * 
+FROM students
+WHERE age > 18;
+✅ 4. Sorting Data (ORDER BY)
+SELECT * 
+FROM students
+ORDER BY name ASC;
+✅ 5. Using Aggregate Functions
+SELECT COUNT(*) 
+FROM students;
+✅ 6. Using GROUP BY
+SELECT department, COUNT(*) 
+FROM employees
+GROUP BY department;
+🔹 DQL vs Other SQL Types
+Type	Full Form	Purpose
+DQL	Data Query Language	Retrieve data
+DML	Data Manipulation Language	Insert, Update, Delete
+DDL	Data Definition Language	Create, Drop, Alter
+DCL	Data Control Language	Grant, Revoke
+🎯 Important for Interviews
+Most SQL interview questions are based on:
+
+SELECT
+
+WHERE
+
+GROUP BY
+
+HAVING
+
+ORDER BY
+
+JOINS
+
+If you want, I can give:
+
+🔥 Full SQL notes (short & simple)
+
+💻 SQL interview practice questions
+
+📊 Joins explanation with examples
+
+
+You said:
+meaning
+
+ChatGPT said:
+📘 Meaning of DQL
+DQL (Data Query Language) means:
+
+👉 A part of SQL used to retrieve (fetch) data from a database.
+
+It is used only for reading data, not for changing or deleting it.
+
+🔹 Simple Meaning
+Data → Information stored in database
+
+Query → Question or request
+
+Language → Method to communicate
+
+So,
+
+DQL = Language used to ask questions from a database
+
+🔹 Example
+SELECT * FROM students;
+This query retrieves all data from the students table.
+
+🔹 Important Point
+DQL mainly includes only one command:
+
+✅ SELECT
+
+If you want, I can also explain:
+
+Meaning of DML
+
+Meaning of DDL
+
+Meaning of DCL
+
+Just tell me 👍
+
+
+
+Upgrade
+You said:
+15. select all
+select * from tablenm
+
+16. particular column dispaly
+SELECT columnnm from tablenm
+
+17. particular row display
+select * from tablenm where id='id' 
+
+18.order by
+select colnm from tblnm order by colnm asc/desc
+
+ChatGPT said:
+Here is the correct and clean SQL syntax for your queries with proper formatting and explanation:
+
+15. Select All Records
+SELECT * 
+FROM tablename;
 👉 * means all columns from the table.
 
 16. Display Particular Column
@@ -323,6 +643,355 @@ Meaning of DDL
 Meaning of DCL
 
 Just tell me 👍
+
+
+
+
+
+Upgrade
+You said:
+15. select all
+select * from tablenm
+
+16. particular column dispaly
+SELECT columnnm from tablenm
+
+17. particular row display
+select * from tablenm where id='id' 
+
+18.order by
+select colnm from tblnm order by colnm asc/desc
+
+ChatGPT said:
+Here is the correct and clean SQL syntax for your queries with proper formatting and explanation:
+
+15. Select All Records
+SELECT * 
+FROM tablename;
+👉 * means all columns from the table.
+
+16. Display Particular Column
+SELECT column_name 
+FROM tablename;
+👉 This will display only the specified column.
+
+Example:
+
+SELECT name 
+FROM students;
+17. Display Particular Row
+SELECT * 
+FROM tablename 
+WHERE id = value;
+⚠ If id is numeric → no quotes
+
+SELECT * FROM students WHERE id = 5;
+If id is string → use quotes
+
+SELECT * FROM students WHERE id = 'A101';
+18. Order By (Sorting Data)
+Ascending (default):
+
+SELECT column_name 
+FROM tablename 
+ORDER BY column_name ASC;
+Descending:
+
+SELECT column_name 
+FROM tablename 
+ORDER BY column_name DESC;
+Example:
+
+SELECT name 
+FROM students 
+ORDER BY name ASC;
+If you want, I can also give you:
+
+🔹 SQL interview questions
+
+🔹 25 basic SQL programs
+
+🔹 Full SQL notes for IT interview preparation
+
+Just tell me 👍
+
+
+You said:
+Uploaded image
+
+ChatGPT said:
+Your image explains SQL Aggregate Functions 👍
+Here is the corrected and clearer version with proper explanation and examples:
+
+📊 Aggregate Functions in SQL
+Aggregate functions perform calculations on a column of values and return a single result.
+
+1️⃣ AVG() – Average Value
+Returns the average of a numeric column.
+
+SELECT AVG(salary) 
+FROM employees;
+2️⃣ COUNT() – Number of Rows
+Returns the total number of rows.
+
+SELECT COUNT(*) 
+FROM employees;
+Count specific column (ignores NULL values):
+
+SELECT COUNT(salary) 
+FROM employees;
+3️⃣ MAX() – Largest Value
+Returns the highest value.
+
+SELECT MAX(salary) 
+FROM employees;
+4️⃣ MIN() – Smallest Value
+Returns the lowest value.
+
+SELECT MIN(salary) 
+FROM employees;
+5️⃣ SUM() – Total Value
+Returns the sum of a numeric column.
+
+SELECT SUM(salary) 
+FROM employees;
+6️⃣ FIRST() and LAST() ⚠
+FIRST() and LAST() are not supported in all databases (like MySQL).
+
+Instead, use:
+
+SELECT column_name 
+FROM table_name 
+ORDER BY column_name ASC 
+LIMIT 1;
+For last:
+
+SELECT column_name 
+FROM table_name 
+ORDER BY column_name DESC 
+LIMIT 1;
+💡 Important Concept: GROUP BY
+Aggregate functions are often used with GROUP BY.
+
+Example:
+
+SELECT department, AVG(salary) 
+FROM employees 
+GROUP BY department;
+If you want, I can give:
+
+🔹 20 SQL aggregate practice questions
+
+🔹 SQL notes PDF style explanation
+
+🔹 Interview-level SQL queries
+
+Tell me what you need 😊
+
+
+You said:
+Uploaded image
+
+ChatGPT said:
+Your image explains SQL Scalar Functions 👍
+Here is the corrected and clearer version with proper syntax and examples:
+
+🔹 Scalar Functions in SQL
+Scalar functions operate on a single value and return a single value.
+
+1️⃣ UCASE() / UPPER()
+Converts text to uppercase.
+
+SELECT UPPER(name) 
+FROM students;
+2️⃣ LCASE() / LOWER()
+Converts text to lowercase.
+
+SELECT LOWER(name) 
+FROM students;
+3️⃣ MID() / SUBSTRING()
+Extracts characters from a string.
+
+SELECT SUBSTRING(name, 1, 3) 
+FROM students;
+👉 Starts from position 1 and extracts 3 characters.
+
+4️⃣ LEN() / LENGTH()
+Returns the length of text.
+
+SQL Server:
+
+SELECT LEN(name) 
+FROM students;
+MySQL:
+
+SELECT LENGTH(name) 
+FROM students;
+5️⃣ ROUND()
+Rounds a number to specified decimal places.
+
+SELECT ROUND(salary, 2) 
+FROM employees;
+6️⃣ NOW()
+Returns current date and time.
+
+SELECT NOW();
+SQL Server:
+
+SELECT GETDATE();
+7️⃣ FORMAT()
+Formats a value for display.
+
+Example (SQL Server):
+
+SELECT FORMAT(salary, 'N2') 
+FROM employees;
+🔥 Important Note
+Different databases (MySQL, SQL Server, Oracle) use slightly different function names.
+
+If you want, I can now explain:
+
+🔹 String functions full list
+
+🔹 Date & Time functions
+
+🔹 30 SQL practice queries
+
+🔹 SQL interview questions
+
+Just tell me 😊
+
+
+You said:
+dql info
+
+ChatGPT said:
+📘 DQL (Data Query Language) in SQL
+DQL is used to retrieve data from a database.
+
+👉 It does NOT modify data.
+👉 It is used only for fetching / reading records.
+
+🔹 Main Command in DQL
+1️⃣ SELECT
+This is the only major command in DQL.
+
+🔹 Basic Syntax
+SELECT column_name
+FROM table_name;
+🔹 Examples
+✅ 1. Select All Data
+SELECT * 
+FROM students;
+✅ 2. Select Specific Column
+SELECT name, age 
+FROM students;
+✅ 3. Select With Condition (WHERE)
+SELECT * 
+FROM students
+WHERE age > 18;
+✅ 4. Sorting Data (ORDER BY)
+SELECT * 
+FROM students
+ORDER BY name ASC;
+✅ 5. Using Aggregate Functions
+SELECT COUNT(*) 
+FROM students;
+✅ 6. Using GROUP BY
+SELECT department, COUNT(*) 
+FROM employees
+GROUP BY department;
+🔹 DQL vs Other SQL Types
+Type	Full Form	Purpose
+DQL	Data Query Language	Retrieve data
+DML	Data Manipulation Language	Insert, Update, Delete
+DDL	Data Definition Language	Create, Drop, Alter
+DCL	Data Control Language	Grant, Revoke
+🎯 Important for Interviews
+Most SQL interview questions are based on:
+
+SELECT
+
+WHERE
+
+GROUP BY
+
+HAVING
+
+ORDER BY
+
+JOINS
+
+If you want, I can give:
+
+🔥 Full SQL notes (short & simple)
+
+💻 SQL interview practice questions
+
+📊 Joins explanation with examples
+
+
+You said:
+meaning
+
+ChatGPT said:
+📘 Meaning of DQL
+DQL (Data Query Language) means:
+
+👉 A part of SQL used to retrieve (fetch) data from a database.
+
+It is used only for reading data, not for changing or deleting it.
+
+🔹 Simple Meaning
+Data → Information stored in database
+
+Query → Question or request
+
+Language → Method to communicate
+
+So,
+
+DQL = Language used to ask questions from a database
+
+🔹 Example
+SELECT * FROM students;
+This query retrieves all data from the students table.
+
+🔹 Important Point
+DQL mainly includes only one command:
+
+✅ SELECT
+
+If you want, I can also explain:
+
+Meaning of DML
+
+Meaning of DDL
+
+Meaning of DCL
+
+Just tell me 👍
+
+
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    salary DECIMAL(10,2),
+    city VARCHAR(50)
+);
+
+INSERT INTO employees (id, name, salary, city) VALUES
+(1, 'Amit', 45000.00, 'Mumbai'),
+(2, 'Priya', 52000.00, 'Delhi'),
+(3, 'Rahul', 38000.00, 'Pune'),
+(4, 'Sneha', 61000.00, 'Bangalore'),
+(5, 'Karan', 47000.00, 'Chennai'),
+(6, 'Neha', 55000.00, 'Hyderabad'),
+(7, 'Arjun', 42000.00, 'Kolkata'),
+(8, 'Riya', 49000.00, 'Ahmedabad');
+
+
 
 
 
