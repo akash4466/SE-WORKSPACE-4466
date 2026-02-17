@@ -784,39 +784,39 @@ If you want, I can give:
 
 🔹 SQL notes PDF style explanation
 
-🔹 Interview-level SQL queries
+ Interview-level SQL queries
 
-Tell me what you need 😊
+Tell me what you need 
 
 
 You said:
 Uploaded image
 
 ChatGPT said:
-Your image explains SQL Scalar Functions 👍
+Your image explains SQL Scalar Functions 
 Here is the corrected and clearer version with proper syntax and examples:
 
-🔹 Scalar Functions in SQL
+ Scalar Functions in SQL
 Scalar functions operate on a single value and return a single value.
 
-1️⃣ UCASE() / UPPER()
+ UCASE() / UPPER()
 Converts text to uppercase.
 
 SELECT UPPER(name) 
 FROM students;
-2️⃣ LCASE() / LOWER()
+ LCASE() / LOWER()
 Converts text to lowercase.
 
 SELECT LOWER(name) 
 FROM students;
-3️⃣ MID() / SUBSTRING()
+ MID() / SUBSTRING()
 Extracts characters from a string.
 
 SELECT SUBSTRING(name, 1, 3) 
 FROM students;
 👉 Starts from position 1 and extracts 3 characters.
 
-4️⃣ LEN() / LENGTH()
+ LEN() / LENGTH()
 Returns the length of text.
 
 SQL Server:
@@ -827,87 +827,89 @@ MySQL:
 
 SELECT LENGTH(name) 
 FROM students;
-5️⃣ ROUND()
+ ROUND()
 Rounds a number to specified decimal places.
 
 SELECT ROUND(salary, 2) 
 FROM employees;
-6️⃣ NOW()
+
+ NOW()
 Returns current date and time.
 
 SELECT NOW();
 SQL Server:
 
 SELECT GETDATE();
-7️⃣ FORMAT()
+
+FORMAT()
 Formats a value for display.
 
 Example (SQL Server):
 
 SELECT FORMAT(salary, 'N2') 
 FROM employees;
-🔥 Important Note
+ Important Note
 Different databases (MySQL, SQL Server, Oracle) use slightly different function names.
 
 If you want, I can now explain:
 
-🔹 String functions full list
+ String functions full list
 
-🔹 Date & Time functions
+ Date & Time functions
 
-🔹 30 SQL practice queries
+ 30 SQL practice queries
 
-🔹 SQL interview questions
+ SQL interview questions
 
-Just tell me 😊
+Just tell me 
 
 
 You said:
 dql info
 
 ChatGPT said:
-📘 DQL (Data Query Language) in SQL
+ DQL (Data Query Language) in SQL
 DQL is used to retrieve data from a database.
 
-👉 It does NOT modify data.
-👉 It is used only for fetching / reading records.
+ It does NOT modify data.
+ It is used only for fetching / reading records.
 
-🔹 Main Command in DQL
-1️⃣ SELECT
+ Main Command in DQL
+SELECT
 This is the only major command in DQL.
 
-🔹 Basic Syntax
+ Basic Syntax
 SELECT column_name
 FROM table_name;
-🔹 Examples
-✅ 1. Select All Data
+ Examples
+ 1. Select All Data
 SELECT * 
 FROM students;
-✅ 2. Select Specific Column
+ 2. Select Specific Column
 SELECT name, age 
 FROM students;
-✅ 3. Select With Condition (WHERE)
+ 3. Select With Condition (WHERE)
 SELECT * 
 FROM students
 WHERE age > 18;
-✅ 4. Sorting Data (ORDER BY)
+ 4. Sorting Data (ORDER BY)
 SELECT * 
 FROM students
 ORDER BY name ASC;
-✅ 5. Using Aggregate Functions
+ 5. Using Aggregate Functions
 SELECT COUNT(*) 
 FROM students;
-✅ 6. Using GROUP BY
+ 6. Using GROUP BY
 SELECT department, COUNT(*) 
 FROM employees
 GROUP BY department;
-🔹 DQL vs Other SQL Types
+ DQL vs Other SQL Types
 Type	Full Form	Purpose
 DQL	Data Query Language	Retrieve data
 DML	Data Manipulation Language	Insert, Update, Delete
 DDL	Data Definition Language	Create, Drop, Alter
 DCL	Data Control Language	Grant, Revoke
-🎯 Important for Interviews
+ Important for Interviews
 Most SQL interview questions are based on:
 
 SELECT
@@ -924,25 +926,26 @@ JOINS
 
 If you want, I can give:
 
-🔥 Full SQL notes (short & simple)
+ Full SQL notes (short & simple)
 
-💻 SQL interview practice questions
+ SQL interview practice questions
 
-📊 Joins explanation with examples
+ Joins explanation with examples
 
 
 You said:
 meaning
 
 ChatGPT said:
-📘 Meaning of DQL
+
+ Meaning of DQL
 DQL (Data Query Language) means:
 
-👉 A part of SQL used to retrieve (fetch) data from a database.
+ A part of SQL used to retrieve (fetch) data from a database.
 
 It is used only for reading data, not for changing or deleting it.
 
-🔹 Simple Meaning
+ Simple Meaning
 Data → Information stored in database
 
 Query → Question or request
@@ -953,14 +956,14 @@ So,
 
 DQL = Language used to ask questions from a database
 
-🔹 Example
+ Example
 SELECT * FROM students;
 This query retrieves all data from the students table.
 
-🔹 Important Point
+ Important Point
 DQL mainly includes only one command:
 
-✅ SELECT
+SELECT
 
 If you want, I can also explain:
 
@@ -970,7 +973,7 @@ Meaning of DDL
 
 Meaning of DCL
 
-Just tell me 👍
+Just tell me 
 
 
 
@@ -990,6 +993,9 @@ INSERT INTO employees (id, name, salary, city) VALUES
 (6, 'Neha', 55000.00, 'Hyderabad'),
 (7, 'Arjun', 42000.00, 'Kolkata'),
 (8, 'Riya', 49000.00, 'Ahmedabad');
+
+
+https://www.canva.com/design/DAHBk5KmpaI/CL1dwVgrao4G1LhidWGX9Q/edit?ui=e30
 
 
 
