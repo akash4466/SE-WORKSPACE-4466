@@ -1,0 +1,97 @@
+ 1. CREATE DATABASE
+
+CREATE DATABASE logitech;
+
+
+ 2. CREATE TABLE model
+
+CREATE TABLE model (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    model_name VARCHAR(100),
+    model_price DECIMAL(10,2)
+);
+
+ 3. ADD COLUMN manufacturer
+
+ALTER TABLE models
+ADD location VARCHAR(100);
+
+ 4. ADD COLUMN location
+
+ALTER TABLE model
+ADD location VARCHAR(100);
+
+ 5. INSERT 5 MODEL
+
+INSERT INTO models (model_name, model_price, company, location) VALUES
+('nav-1',23000,'dell','pune'),
+('nav-2',13000,'hp','mumbai'),
+('nav-3',33000,'lenovo','rajkot'),
+('nav-4',14000,'dell','patna'),
+('nav-5',23000,'dell','goa');
+
+
+ 6. UPDATE MODEL PRICE
+
+UPDATE models
+SET model_price = 10999
+WHERE model_name = 'MX Master 3';
+
+ 7. DELETE MODEL WITH MINIMUM PRICE
+
+DELETE FROM models
+WHERE model_price = (SELECT MIN(model_price) FROM models);
+
+ 8. SELECT MODELS ORDER BY PRICE ASC
+
+SELECT * FROM models
+ORDER BY model_price ASC;
+
+
+ 9. CREATE AUDIT TABLE FOR TRIGGERS
+
+CREATE TABLE model_audit (
+    audit_id INT PRIMARY KEY AUTO_INCREMENT,
+    action VARCHAR(50),
+    model_name VARCHAR(100),
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ TRIGGER FOR INSERT
+
+DELIMITER $$
+
+CREATE TRIGGER time
+AFTER INSERT ON model
+FOR EACH ROW
+BEGIN
+    INSERT INTO model_audit(action_performed, model_name)
+    VALUES ('INSERT', NEW.model_name);
+END $$
+
+
+ TRIGGER FOR UPDATE
+
+CREATE TRIGGER timeb
+AFTER UPDATE ON models
+FOR EACH ROW
+BEGIN
+    INSERT INTO model_audit(action_performed, model_name)
+    VALUES ('UPDATE', NEW.model_name);
+END $$
+
+ TRIGGER FOR DELETE
+
+CREATE TRIGGER timec
+AFTER DELETE ON model
+FOR EACH ROW
+BEGIN
+    INSERT INTO model_audit(action_performed, model_name)
+    VALUES ('DELETE', OLD.model_name);
+END $$
+
+DELIMITER ;
+
+ CHECK AUDIT RECORDS
+
+SELECT * FROM models_audit;
