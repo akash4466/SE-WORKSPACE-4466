@@ -1,3 +1,0 @@
-name:akash
-email:akash@gmail.com
-pass:123

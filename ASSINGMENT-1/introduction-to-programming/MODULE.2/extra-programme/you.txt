@@ -1,3 +1,0 @@
-name:r
-email:r@gamil.com
-password:123

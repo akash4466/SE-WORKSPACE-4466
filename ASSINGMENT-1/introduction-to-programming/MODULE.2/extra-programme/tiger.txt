@@ -1,2 +1,0 @@
-email:polakash@gamil.com
-password:1234
